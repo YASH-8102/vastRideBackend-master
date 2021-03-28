@@ -1,8 +1,8 @@
 var admin = require("firebase-admin");
 var async = require("async");
-var vastrideAuth = require("../dauntless-brace-290619-firebase-adminsdk-d70rm-c4cc2d5613.json");
-var vastrideDriverAuth = require("../vastridedriver-firebase-adminsdk-jjbsb-1f8b42aa7b.json");
-var vastrideAdminAuth = require("../vastrideadmin-firebase-adminsdk-o5eu3-f082dac352.json");
+var vastrideAuth = require("../Private/dauntless-brace-290619-firebase-adminsdk-d70rm-c4cc2d5613.json");
+var vastrideDriverAuth = require("../Private/vastridedriver-firebase-adminsdk-jjbsb-1f8b42aa7b.json");
+var vastrideAdminAuth = require("../Private/vastrideadmin-firebase-adminsdk-o5eu3-f082dac352.json");
 
 var vastride = admin.initializeApp(
   {

@@ -9,8 +9,7 @@ const addDriver = ({ name, id, city, vehicle, location }) => {
   city = city.trim().toLowerCase();
   const driver = { name, city, vehicle, location, id };
   DRIVERS.push(driver);
-  console.log(DRIVERS);
-
+  
   return { driver };
 };
 const addUser = ({ name, id, city, location }) => {
@@ -27,7 +26,7 @@ const removeDriver = (id) => {
 };
 
 const filterByCity = (city) => {
-  console.log(city)
+
   return DRIVERS.filter((e) => {
     return e.city.toLowerCase() === city.toLowerCase()
   });
@@ -36,13 +35,13 @@ const getAllDriver = ()=>{
   return DRIVERS
 }
 const findNearestDriver=(coordinates,city)=>{
-  console.log(coordinates)
+ 
   const distanceArray=[]
   filterByCity(city).forEach((e,i)=>{
    distanceArray.push({distance:findDistance(e.location,coordinates),driver:e})
   
  })
-  console.log(distanceArray)
+ 
   const nearDrivers = quick_Sort(distanceArray)
   return nearDrivers
 }
